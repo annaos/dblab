@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<click-app>
+  <pages package="com.dblab.click.pages"  automapping="true">
+    <page path="input.htm" classname="com.dblab.click.pages.STablePage"/>
+   </pages>
+</click-app>
