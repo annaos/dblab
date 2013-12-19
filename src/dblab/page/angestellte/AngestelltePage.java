@@ -73,7 +73,7 @@ public class AngestelltePage extends TemplatePage {
         addControl(table);
 
         table.setClass(Table.CLASS_ISI);
-        table.setPageSize(10);
+        table.setPageSize(14);
         table.setShowBanner(true);
         table.setBannerPosition(Table.POSITION_TOP);
         table.setSortable(true);
@@ -162,8 +162,8 @@ public class AngestelltePage extends TemplatePage {
     public List<Element> getHeadElements() {
         if (headElements == null) {
             headElements = super.getHeadElements();
-            headElements.add(new JsImport("/assets/js/jquery-1.4.2.js"));
-            headElements.add(new JsScript("/ajax/table/table-ajax.js", new HashMap()));
+            headElements.add(new JsImport("/script/js/jquery-1.4.2.js"));
+            headElements.add(new JsScript("/script/table/table-ajax.js", new HashMap()));
         }
         return headElements;
     }

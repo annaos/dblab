@@ -1,11 +1,12 @@
 html, body {
-  height: 550px;
+  height: 590px;
 }
 
 body {
     background: #2c2f45;
     margin: 12px 0px;
     padding: 0;
+    font-family: Arial, Helvetica, "Sans Serif";
 }
 
 div.page {
@@ -33,7 +34,7 @@ div.title-left {
     top: 6px;
     left: 110px;    
     color: navy;
-    font-size: 24pt;
+    font-size: 20pt;
     font-weight: bolder;
     vertical-align: middle;
     white-space: nowrap;
@@ -74,7 +75,7 @@ div.contentbody {
 position:  absolute;
 margin-top: -18px;
 width: 100px;
-height: 475px;
+height: 515px;
 border: #a80402 solid 2px;
 text-align: center;
 }
@@ -84,13 +85,15 @@ text-align: center;
     overflow-y: auto; 
     margin-top: -18px;
     margin-left: 106px;
-    height: 470px;
+    height: 510px;
     padding: 30px;
     padding-bottom: 0px;
     padding-top: 5px;
     border: #a80402 solid 2px;
 }
 button.button {
+font-family: Arial, Helvetica, "Sans Serif";
+font-size: 9pt;
 width: 90px;
 height: 40px;
 }
@@ -102,6 +105,10 @@ button.buttonReport {
     left: 5px;
     bottom: 12px;
     font-weight: bold;
+    
+    font-family: Arial, Helvetica, "Sans Serif";
+font-size: 9pt;
+    
     width: 90px;
     height: 40px;
 }
