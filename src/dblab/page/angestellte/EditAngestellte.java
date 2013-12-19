@@ -1,7 +1,7 @@
 
 package dblab.page.angestellte;
 
-import dblab.AngestellteService;
+import dblab.service.AngestellteService;
 import dblab.InvestmentSelect;
 import javax.annotation.Resource;
 
@@ -12,7 +12,6 @@ import org.apache.click.control.Form;
 import org.apache.click.control.HiddenField;
 import org.apache.click.control.Submit;
 import org.apache.click.control.TextField;
-//import org.apache.click.examples.control.InvestmentSelect;
 import dblab.domain.Angestellte;
 import dblab.page.HomePage;
 import dblab.page.TemplatePage;
@@ -22,18 +21,8 @@ import org.apache.click.extras.control.DoubleField;
 import org.apache.click.extras.control.EmailField;
 import org.apache.click.extras.control.IntegerField;
 import org.apache.click.util.Bindable;
-import org.springframework.stereotype.Component;
 
-/**
- * Provides an edit Customer Form example. The Customer business object
- * is initially passed to this Page as a request attribute.
- * <p/>
- * Note the bindable "id" and "referrer" fields have their values automatically
- * set with any identically named request parameters after the page is created.
- * These fields will be used to populate the similarly named HiddenFields
- * on GET requests. See the onGet method below.
- */
-@Component
+
 public class EditAngestellte extends TemplatePage {
 
     private static final long serialVersionUID = 1L;

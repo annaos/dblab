@@ -1,24 +1,18 @@
 html, body {
-  //overflow-x: hidden;
-  //overflow-y: hidden; 
-  height: 550px;//95%;
+  height: 550px;
 }
 
 body {
-    //width: 90%;
     background: #2c2f45;
-    //color: #7c28d7;
     margin: 12px 0px;
     padding: 0;
 }
 
 div.page {
-   
- // border: 1px solid green;//#202020;
   margin: 0 auto;
   text-align: left;
   background: #ffffff;
- width: 90%;
+  width: 90%;
   min-height: 100%;
 }
 
@@ -35,11 +29,9 @@ div.title-icon {
 }
 
 div.title-left {
-    position: absolute;
-    
+    position: absolute;    
     top: 6px;
-    left: 110px;
-    
+    left: 110px;    
     color: navy;
     font-size: 24pt;
     font-weight: bolder;
@@ -48,25 +40,23 @@ div.title-left {
 }
 
 div.title-hosted {
-  position: absolute;
-  
+  position: absolute;  
   right: 0px;
 }
 
 div.title-hosted p, div.title-hosted a {
-	color: navy;
-	font-size: 8pt;
-	//margin: 0.8em;
-	text-align:right;
-	text-decoration: none;
-	vertical-align: middle;
-	white-space: nowrap;
+    color: navy;
+    font-size: 8pt;
+    text-align:right;
+    text-decoration: none;
+    vertical-align: middle;
+    white-space: nowrap;
 }
 
 div.header-color {
     position: absolute;
     top: 50px;
-    background-color: #a80402;//#96c2e7;//#aef9d8;
+    background-color: #a80402;
     font-size: 9pt;
     height: 25px;
     width: 100%;
@@ -76,41 +66,45 @@ div.contentbody {
   width: calc(100%-2px);
   height: 465px;
   margin: 0 auto;
-
-
-//width: 89.8%;
-//height: 76%;
-border: #a80402 solid 2px;
+  border: #a80402 solid 2px;
 }
 
 
 #menu {
-position:  absolute;// relative;
-margin-top: -17px;
+position:  absolute;
+margin-top: -18px;
 width: 100px;
-height: 495px;
+height: 475px;
 border: #a80402 solid 2px;
-
 text-align: center;
 }
+
 #content {
-
-overflow-x: auto;
-overflow-y: auto; 
-margin-top: -17px;
-//width: 89%;
-height: 435px;
-
-margin-left: 105px;
-padding: 30px;
-border: #a80402 solid 2px;
+    overflow-x: auto;
+    overflow-y: auto; 
+    margin-top: -18px;
+    margin-left: 106px;
+    height: 470px;
+    padding: 30px;
+    padding-bottom: 0px;
+    padding-top: 5px;
+    border: #a80402 solid 2px;
 }
 button.button {
 width: 90px;
 height: 40px;
 }
 
-
+button.buttonReport {
+    position: absolute;
+    background: #1bef0d;
+    left: 1px;
+    left: 5px;
+    bottom: 12px;
+    font-weight: bold;
+    width: 90px;
+    height: 40px;
+}
 
 div.content h2 {
   margin: 0;

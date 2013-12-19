@@ -1,11 +1,12 @@
 <html>
     <head>
         <meta charset="UTF-8"/>
-        <title>$title : Bergwerksteurung</title>
+        <title>$title : Bergwerksteurung (Datenbanken Projektlabor)</title>
         <link type="text/css" rel="stylesheet" href="$context/css/style.css" title="Style"/>
 
 
         <script src="$context/script/load.js" type="text/javascript"></script>
+        <link rel="shortcut icon" href="$context/sql.ico" type="image/ico"/>
     </head>
     <body>
 
@@ -18,7 +19,7 @@
 
             <div class="title-icon"><img src="$context/images/title-icon.png" border="0" alt="Click"/></div>
 
-            <div class="title-left">Bergwerksteurung</div>
+            <div class="title-left">Bergwerksteurung (Datenbanken Projektlabor)</div>
 
             <div class="title-hosted"><p>Entwickler:</p> <p>Andrey Nikolaev & Anna Ostrovskaya</p></div>
 
@@ -33,6 +34,9 @@
                 <p><button class="button" type="button" onclick="window.location.href='$context/page/angestellte/AngestelltePage.htm'">Bergarbeiter</button></p>
                 <p><button class="button" type="button" onclick="javascript:ajaxpage('$context/jspPage/schacht.jsp', 'content');">Schächte</button></p>
                 <p><button class="button" type="button" onclick="javascript:ajaxpage('$context/jspPage/db_insert.jsp', 'content');">Bericht der Arbetszeit</button></p>
+                
+                <p><hr width="90" size="2" color="#a80402" align="center">
+                <p><button class="buttonReport" type="button" onclick="window.location.href='$context'">Bericht Projektlabor</button></p>
 
         </div>
         <div id="content">

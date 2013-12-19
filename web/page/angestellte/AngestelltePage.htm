@@ -11,11 +11,11 @@
         $form.startTag()
 
 <!-- Show validation errors -->
-#if (!$form.fields.search.valid)
+#if (!$form.fields.Suche.valid)
 <div style="color: red;margin-bottom: 1em"> $form.fields.search.error</div>
 #end
 
- <b>Customer</b> ${form.fields.search}${form.fields.type}${form.fields.go}
+ <b>Angestellte</b> ${form.fields.Suche}${form.fields.Typ}${form.fields.search}
 $form.endTag()
 <div id="tableContainer">
         $table
