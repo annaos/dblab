@@ -1,0 +1,117 @@
+html, body {
+  //overflow-x: hidden;
+  //overflow-y: hidden; 
+  height: 550px;//95%;
+}
+
+body {
+    //width: 90%;
+    background: #2c2f45;
+    //color: #7c28d7;
+    margin: 12px 0px;
+    padding: 0;
+}
+
+div.page {
+   
+ // border: 1px solid green;//#202020;
+  margin: 0 auto;
+  text-align: left;
+  background: #ffffff;
+ width: 90%;
+  min-height: 100%;
+}
+
+div.header {
+  position: relative;
+  height: 95px;
+}
+
+div.title-icon {
+  position:absolute;
+  top: 12px;
+  left: 15px;
+  z-index:10;
+}
+
+div.title-left {
+    position: absolute;
+    
+    top: 6px;
+    left: 110px;
+    
+    color: navy;
+    font-size: 24pt;
+    font-weight: bolder;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+
+div.title-hosted {
+  position: absolute;
+  
+  right: 0px;
+}
+
+div.title-hosted p, div.title-hosted a {
+	color: navy;
+	font-size: 8pt;
+	//margin: 0.8em;
+	text-align:right;
+	text-decoration: none;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+
+div.header-color {
+    position: absolute;
+    top: 50px;
+    background-color: #a80402;//#96c2e7;//#aef9d8;
+    font-size: 9pt;
+    height: 25px;
+    width: 100%;
+}
+
+div.contentbody {
+  width: calc(100%-2px);
+  height: 465px;
+  margin: 0 auto;
+
+
+//width: 89.8%;
+//height: 76%;
+border: #a80402 solid 2px;
+}
+
+
+#menu {
+position:  absolute;// relative;
+margin-top: -17px;
+width: 100px;
+height: 495px;
+border: #a80402 solid 2px;
+
+text-align: center;
+}
+#content {
+
+overflow-x: auto;
+overflow-y: auto; 
+margin-top: -17px;
+//width: 89%;
+height: 435px;
+
+margin-left: 105px;
+padding: 30px;
+border: #a80402 solid 2px;
+}
+button.button {
+width: 90px;
+height: 40px;
+}
+
+
+
+div.content h2 {
+  margin: 0;
+}

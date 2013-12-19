@@ -1,5 +1,5 @@
 body {
-overflow-x: hidden;
+overflow-x: auto;
 overflow-y: auto; 
 margin: 10px 80px;
 }
@@ -10,20 +10,7 @@ background-color: white;
 text-align: center;
 }
 
-#menu {
-position: absolute;
-margin-top: 10;
-width: 100px;
-height: 400px;
-border: red solid 2px;
-background-color: white;
-text-align: center;
-}
 
-button.button {
-width: 90px;
-height: 40px;
-}
 
 #content {
 overflow: scroll;

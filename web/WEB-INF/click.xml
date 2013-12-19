@@ -1,6 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<click-app>
-  <pages package="com.dblab.click.pages"  automapping="true">
-    <page path="input.htm" classname="com.dblab.click.pages.STablePage"/>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<click-app charset="UTF-8" locale="de">
+
+  <pages package="dblab.page">
+    <page path="page/angestellte/AngestelltePage.htm" classname="dblab.page.angestellte.AngestelltePage"/>
+    <page path="index.htm" classname="dblab.page.HomePage"/>
    </pages>
+  <mode value="profile"/>
+
 </click-app>

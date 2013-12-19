@@ -6,6 +6,11 @@
     <load-on-startup>0</load-on-startup>
   </servlet>
 
+<welcome-file-list> 
+
+<welcome-file>index.htm</welcome-file>
+
+  </welcome-file-list>
   <servlet-mapping>
     <servlet-name>ClickServlet</servlet-name>
     <url-pattern>*.htm</url-pattern>
