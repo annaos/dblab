@@ -6,14 +6,14 @@ import dblab.domain.Angestellte;
 import dblab.page.TemplatePage;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import org.apache.click.ActionListener;
+import javax.annotation.Resource;
 import org.apache.click.ActionResult;
 import org.apache.click.Context;
 import org.apache.click.Control;
 import org.apache.click.ajax.DefaultAjaxBehavior;
 import org.apache.click.control.AbstractLink;
 
+import org.apache.click.control.ActionLink;
 import org.apache.click.control.Column;
 import org.apache.click.control.Form;
 import org.apache.click.control.PageLink;
@@ -26,7 +26,6 @@ import org.apache.click.element.Element;
 import org.apache.click.element.JsImport;
 import org.apache.click.element.JsScript;
 import org.apache.click.extras.control.LinkDecorator;
-import org.apache.click.util.ClickUtils;
 //import org.springframework.stereotype.Component;
 
 
@@ -42,7 +41,6 @@ public class AngestelltePage extends TemplatePage {
     private final TextField textField;
     private final Select typeSelect;
  
-    private final Select sizeSelect = new Select("selectSize");
     //@Resource(name="angestellteService")
     private AngestellteService angestellteService;
     private Column columnViewEdit;
@@ -52,7 +50,7 @@ public class AngestelltePage extends TemplatePage {
     public AngestelltePage() {
         
         addControl(form);
-        addControl(sizeSelect);
+        
         textField = new TextField("Suche");
         form.add(textField);
 
@@ -63,11 +61,7 @@ public class AngestelltePage extends TemplatePage {
         form.add(typeSelect);
 
         form.add(new Submit("search", "Suche"));
-        
-        
-        sizeSelect.addAll(new String[] {"5", "10", "15", "20", "25", "30", "35", "40", "45", "50"});
-        
-        //form.add(sizeSelect);
+
         table.getControlLink().addBehavior(new DefaultAjaxBehavior() {
 
             @Override
@@ -76,21 +70,10 @@ public class AngestelltePage extends TemplatePage {
                 return new ActionResult(table.toString(), ActionResult.HTML);
             }
         });
-        
-         sizeSelect.addBehavior(new DefaultAjaxBehavior() {
-
-            @Override
-            public ActionResult onAction(Control source) {
-                table.setPageSize(2);
-                sizeSelect.onProcess();
-                return new ActionResult(table.toString(), ActionResult.HTML);
-            }
-        });
-        
         addControl(table);
 
         table.setClass(Table.CLASS_ISI);
-        table.setPageSize(12);
+        table.setPageSize(14);
         table.setShowBanner(true);
         table.setBannerPosition(Table.POSITION_TOP);
         table.setSortable(true);
@@ -114,9 +97,9 @@ public class AngestelltePage extends TemplatePage {
         editLink.setParameter("referrer", "/AngestelltePage.htm");
         columnViewEdit = new Column("View/Edit");
         columnViewEdit.setTextAlign("center");
-          // sizeSelect.setSize(8);
+        
 
-     
+        
         
         AbstractLink[] links = new AbstractLink[] { viewLink,editLink };
         columnViewEdit.setDecorator(new LinkDecorator(table, links, "id"));
@@ -139,15 +122,25 @@ public class AngestelltePage extends TemplatePage {
         table.restoreState(getContext());
     }
 
+     /**
+     * Return CustomerService instance from Spring application context.
+     *
+     * @return CustomerService instance
+     */
     public AngestellteService getAngestellteService() {
         angestellteService = new AngestellteService();
         return angestellteService;
     }
 
+    /**
+     * Set the CustomerService instance from Spring application context.
+     *
+     * @param angestellteService the customerService instance to inject
+     */
     public void setCustomerService(AngestellteService angestellteService) {
         this.angestellteService = angestellteService;
     }
-
+    
     
    public boolean onClearClick() {
         // Clear field values
@@ -167,11 +160,10 @@ public class AngestelltePage extends TemplatePage {
     
         @Override
     public List<Element> getHeadElements() {
-        if (headElements == null) { 
+        if (headElements == null) {
             headElements = super.getHeadElements();
             headElements.add(new JsImport("/script/js/jquery-1.4.2.js"));
-            headElements.add(new JsScript("/script/table-ajax.js", new HashMap()));
-   
+            headElements.add(new JsScript("/script/table/table-ajax.js", new HashMap()));
         }
         return headElements;
     }

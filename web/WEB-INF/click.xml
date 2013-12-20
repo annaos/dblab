@@ -4,7 +4,6 @@
 
   <pages package="dblab.page">
     <page path="page/angestellte/AngestelltePage.htm" classname="dblab.page.angestellte.AngestelltePage"/>
-    <page path="page/schaechte/SchaechtePage.htm" classname="dblab.page.schaechte.SchaechtePage"/>
     <page path="index.htm" classname="dblab.page.HomePage"/>
    </pages>
   <mode value="profile"/>

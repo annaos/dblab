@@ -8,13 +8,15 @@
 </head>
 <body>
     
- 
- <table cellspacing="8" cellpadding="8">
-   <tr>
-      <td> $selectSize</td>
-      <td> <div id="customerDetails"/> </td>
-   </tr>
-</table>
+        $form.startTag()
+
+<!-- Show validation errors -->
+#if (!$form.fields.Suche.valid)
+<div style="color: red;margin-bottom: 1em"> $form.fields.search.error</div>
+#end
+
+ <b>Angestellte</b> ${form.fields.Suche}${form.fields.Typ}${form.fields.search}
+$form.endTag()
 <div id="tableContainer">
         $table
     </div>
