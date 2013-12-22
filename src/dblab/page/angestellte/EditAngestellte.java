@@ -12,7 +12,6 @@ import org.apache.click.control.Form;
 import org.apache.click.control.HiddenField;
 import org.apache.click.control.Submit;
 import org.apache.click.control.TextField;
-import dblab.domain.Angestellte;
 import dblab.page.HomePage;
 import dblab.page.TemplatePage;
 
@@ -82,49 +81,9 @@ public class EditAngestellte extends TemplatePage {
      *
      * @see Page#onGet()
      */
-    @Override
-    public void onGet() {
-        if (id != null) {
-            Angestellte customer = customerService.getCustomerForID(id);
 
-            if (customer != null) {
-                // Copy customer data to form. The idField value will be set by
-                // this call
-                form.copyFrom(customer);
-            }
-        }
 
-        if (referrer != null) {
-            // Set HiddenField to bound referrer field
-            referrerField.setValue(referrer);
-        }
-    }
-
-    public boolean onOkClick() {
-        if (form.isValid()) {
-            Integer id = (Integer) idField.getValueObject();
-            Angestellte customer = customerService.getCustomerForID(id);
-
-            if (customer == null) {
-                customer = new Angestellte();
-            }
-            form.copyTo(customer);
-
-            customerService.saveAngestellte(customer);
-
-            String referrer = referrerField.getValue();
-            if (referrer != null) {
-                setRedirect(referrer);
-            } else {
-                setRedirect(HomePage.class);
-            }
-
-            return true;
-
-        } else {
-            return true;
-        }
-    }
+   
 
     public boolean onCancelClick() {
         String referrer = referrerField.getValue();
